@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Calculator</title>
+    
+    <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
+    
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #222; }
+    </style>
+</head>
+<body>
+    
+    <div id="app-container"></div>
+
+    <script>
+        (async function() {
+            // 2. Initialize the CheerpJ Engine
+            await cheerpjInit();
+
+            // 3. Create a display area (width, height)
+            // Adjust these numbers to match your Swing window size!
+            cheerpjCreateDisplay(500, 700); 
+
+            // 4. Run the JAR
+            // IMPORTANT: Keep the "/app/" prefix. It tells the browser "look in the current website root".
+            await cheerpjRunJar("/app/Calculator.jar");
+        })();
+    </script>
+</body>
+</html>
